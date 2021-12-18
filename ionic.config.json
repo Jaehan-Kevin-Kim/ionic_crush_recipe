@@ -1,0 +1,7 @@
+{
+  "name": "ionic_crush",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
