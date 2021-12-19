@@ -4,6 +4,12 @@
       <ion-back-button defaultHref="/recipes" text=""></ion-back-button>
     </ion-buttons>
     <ion-title>{{loadedRecipe.title}}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onDeleteRecipe()">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -22,7 +28,7 @@
     <ion-row>
       <ion-col>
         <ion-list>
-          <ion-item *ngForm="let ig of loadedRecipe.ingredients">
+          <ion-item *ngFor="let ig of loadedRecipe.ingredients">
             {{ig}}
           </ion-item>
         </ion-list>

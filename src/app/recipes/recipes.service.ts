@@ -25,7 +25,6 @@ export class RecipesService {
   constructor() { }
 
   getAllRecipes() {
-
     return [...this.recipes];
   }
 
@@ -33,6 +32,11 @@ export class RecipesService {
     console.log('getRecipe', this.recipes.find(recipe => recipe.id === recipeId));
     console.log('spread getRecipe', { ...this.recipes.find(recipe => recipe.id === recipeId) });
     return { ...this.recipes.find(recipe => recipe.id === recipeId) };
+  }
+
+  deleteRecipe(recipeId: string) {
+    this.recipes = this.recipes.filter((recipe) => recipe.id !== recipeId);
+    console.log(this.recipes);
   }
 
 }
