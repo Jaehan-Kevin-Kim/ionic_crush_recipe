@@ -1,13 +1,16 @@
 <ion-header>
   <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/recipes" text=""></ion-back-button>
+    </ion-buttons>
     <ion-title>{{loadedRecipe.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-grid fixed>
+  <ion-grid class="ion-no-padding">
     <ion-row>
-      <ion-col>
+      <ion-col class="ion-no-padding">
         <ion-img [src]="loadedRecipe.imageUrl"></ion-img>
       </ion-col>
     </ion-row>
